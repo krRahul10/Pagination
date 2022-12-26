@@ -5,7 +5,7 @@ import Paginations from './Components/Paginations';
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <h1>Pagination App</h1>
       <Paginations/>
     </div>
   );

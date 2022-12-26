@@ -5,6 +5,7 @@ import "./pagination.css";
 
 const Paginations = () => {
   //'https://dummyjson.com/products?limit=10&skip=10&select=title,price'
+
   // slice(page * 10 - 10, page * 10)
 
   const [products, setProduct] = useState([]);
@@ -36,8 +37,6 @@ const Paginations = () => {
   }, [page]);
   return (
     <div>
-      <h1>Pagination</h1>
-
       {products.length > 0 && (
         <div className="products">
           {products.map((el, index) => {
