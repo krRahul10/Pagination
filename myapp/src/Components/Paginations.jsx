@@ -2,11 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import "./pagination.css";
+// import '../App.css';
 
 const Paginations = () => {
   const [products, setProduct] = useState([]);
 
-  console.log("prod", products);
+//   console.log("prod", products);
   const fetchData = async () => {
     const res = await fetch("https://dummyjson.com/products");
     const data = await res.json();
@@ -27,7 +28,12 @@ const Paginations = () => {
       {products.length > 0 && (
         <div className="products">
           {products.map((el, index) => {
-            return <span>{el.brand}</span>;
+            return (
+              <span className="products__single" key={el.id}> 
+                <img src={el.thumbnail} alt={el.title} />
+                <span>{el.title}</span>
+              </span>
+            );
           })}
         </div>
       )}
